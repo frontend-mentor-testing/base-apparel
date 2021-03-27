@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.information,
+.picture,
+.attribution {
+  position: relative;
+  z-index: 1;
+}
+
+.information {
+  overflow: hidden;
+  width: 60%;
+  background: linear-gradient(135deg, white 0%, #fff5f5 100%);
+}
+.information .desktop-pattern {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.top {
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.top-mobile {
+  display: none;
+}
+
+main {
+  width: 75%;
+  margin: 0 auto;
+  color: #ce9797;
+}
+main .banner {
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  font-size: 4em;
+  line-height: 1.25;
+}
+main .banner .we-are {
+  font-weight: 300;
+}
+main .banner .coming-soon {
+  color: #413a3a;
+}
+main p {
+  font-size: 16px;
+  width: 75%;
+  line-height: 1.2;
+  padding: 20px 0;
+}
+
+.input-area {
+  position: relative;
+  margin: 20px 0;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ce9797;
+  border-radius: 30px;
+}
+.input-area .email-input {
+  width: 90%;
+  padding: 15px 20px;
+  border: none;
+  color: #413a3a;
+  font-size: 18px;
+  background: transparent;
+}
+.input-area .email-input:focus {
+  border: none;
+  outline: none;
+}
+.input-area .submit-button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
+  border: none;
+  border-radius: 20px;
+  width: 20%;
+  box-shadow: 0 10px 20px #ce9797;
+  cursor: pointer;
+}
+
+.picture {
+  width: 40%;
+  background: url("../images/hero-desktop.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: grid;
+    text-align: center;
+  }
+
+  .information,
+.picture,
+main,
+p {
+    width: 100%;
+    text-align: center;
+  }
+
+  p,
+.input-area {
+    margin: 0 auto;
+  }
+
+  .top {
+    display: none;
+  }
+
+  .top-mobile {
+    height: 15vh;
+    display: flex;
+  }
+
+  .picture {
+    height: 40vh;
+    order: 1;
+    background: url("../images/hero-mobile.jpg");
+    background-size: cover;
+  }
+
+  .information {
+    padding: 2em 0;
+    order: 2;
+  }
+  .information .desktop-pattern {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
